@@ -6,24 +6,56 @@
     <link rel="stylesheet" href="styles.css"
     </head>
     <body><h1 id="title">The Emily Experience</h1>
-    <p class="intro">Please fill out this form to feedback on your experience with Emily today</p>
+    <p class="intro" id="description">Please fill out this form to feedback on your experience with Emily today</p>
 <form method="post" id="survey-form" action='https://register-demo.freecodecamp.org'>
 <fieldset>
   <h2>About you</h2>
-  <label for="name">Your name: <input type="text" id="name"/></label>
-  <label for="d-o-b">Your date of birth: <input type="date"/></label>
-  <label for="m-m-n">Your mother's maiden name: <input type="text" /></label>
+  <label for="name" id="name-label">Name: <input type="text" id="name" placeholder="Your name here"required/></label>
+  <label for="email" id="email-label" >E-mail address: <input type="email" placeholder="emsfan22@email" id="email" required/></label>  
+  <label for="d-o-b">Date of birth: <input type="date"/></label>
+  <label for="m-m-n" id="number-label">Height in cm: <input type="number" placeholder="height" min="100" max="200"/></label>
+ <p>Gender:</p>
+ <label for="m-or-f"> <input type="radio" id="male" name="gender" value="male"/>Male</label>
+<label for="m-or-f"> <input type="radio" id="female" name="gender" value="female"/>Female</label>
+<label for="m-or-f"> <input type="radio" id="pnts" name="gender" value="pnts"/>Prefer not to say</label>
 
 
 </fieldset>
 <fieldset>
 <h2>Your relationship with Emily</h2>
-<label for="ranking">Where does Emily rank among your friends? <input type="number" /></label>
+<label for="ranking">Where does Emily rank among your friends? <select>
+<option value="">Select a ranking</option>
+<option value="1">1, obviously</option>
+ </select>
+</label>
+<label for="number">How long have you known Emily? (years) <input type="number" id="number" name="how-long" placeholder="0"min="0" max="15"/></label>
+<label for="petname">Which is your preferred petname for Emily? <select id="dropdown">
+<option value="">Select preferred name</option>
+<option value="1">Ems</option>
+<option value="2">Ratgirl</option>
+<option value="3">Emski patata</option>
+<option value="4">Emilio</option>
+
+ </select>
+</label>
+
+
+
 </fieldset>
-<fieldset></fieldset>
+<fieldset>
+ <h2>Your experience with Emily today</h2>
+
+ <label for="pulley">Played pulley <input type="checkbox" class="inline" value="p"/>
+  <label for="dog-sighting">Saw a dog <input type="checkbox" class="inline" value="s"/>
+   <label for="human-food">Fed her human food <input type="checkbox" class="inline" value="h"/>
+    <label for="rub-belly">Gave belly rubs <input type="checkbox" class="inline" value="b"/>
+  <label for="picture" class="picture-label">Upload a picture of how much fun you had today: <input type="file" id="picture"/></label><label for="describe">Describe in words how much fun you had today:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="We had a great time..."></textarea>
+        </label>
+</fieldset>
 
 
-
+<input type="submit" value="Submit" type="submit" id="submit"/>
 </form>
 
 
@@ -32,5 +64,4 @@
 
 
 
-<html>
-
+</html>
